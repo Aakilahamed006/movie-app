@@ -1,0 +1,67 @@
+/* Category container */
+.category {
+    margin: 20px;
+  }
+  
+  /* Movie row to display movies in a horizontal row */
+  .movie-row {
+    display: flex;
+    flex-wrap: nowrap; /* Keep all items in one row, no wrapping */
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
+    padding: 10px 0;
+  }
+  
+  /* Movie card styling */
+  .movie-card {
+    position: relative;
+    margin-right: 15px;
+    width: 200px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Movie card hover effect */
+  .movie-card:hover {
+    transform: scale(1.05); /* Slightly zoom in on hover */
+  }
+  
+  /* Movie card image styling */
+  .movie-card img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  }
+  
+  /* Overview styling */
+  .movie-card .overview {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 0 0 8px 8px;
+    text-align: left;
+  }
+  
+  /* Show the overview on hover */
+  .movie-card:hover .overview {
+    display: block;
+  }
+  
+  /* Responsive design for small screens */
+  @media (max-width: 768px) {
+    .movie-card {
+      width: 150px;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .movie-card {
+      width: 120px;
+    }
+  }
+  
