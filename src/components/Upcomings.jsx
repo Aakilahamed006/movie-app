@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+import './moviestyle.css';
 const Upcomings = () => {
   const [shows, setShows] = useState([]);
 

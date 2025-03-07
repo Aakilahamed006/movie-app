@@ -26,6 +26,7 @@ const RatedMovie = () => {
                 src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                 alt={movie.title}
               />
+              <button>click to watch video</button>
               <h2>{movie.title}</h2>
               <p><strong>Rating:</strong> {movie.vote_average}</p>
               {/* Overview shown on hover */}
