@@ -1,20 +1,18 @@
-
-import RatedMovie from './components/movie'
-import Tvshows from './components/Tvshows'
-import Popularshows from './components/popular'
-import Upcomings from './components/Upcomings'
-import Searchbar from './components/Searchbar'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/home"
+import Movie from "./pages/movie"
 function App() {
  
 
   return (
     <>
-   <Searchbar/>
-   <RatedMovie/>
-   <Tvshows/>
-   <Popularshows/>
-   <Upcomings/>
-   
+   <Router>
+   <Routes>
+   <Route path="/" element={<Home/>}/>
+   <Route path="/Movie/:id" element={<Movie/>}/>
+ 
+   </Routes>
+   </Router>
     </>
   )
 }

@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import './moviestyle.css';
+import { Navigate, useNavigate } from "react-router-dom";
 const Tvshows = () => {
   const [shows, setShows] = useState([]);
-
+  const navigate=useNavigate()
   const getShows = async () => {
     try {
       const response = await fetch(
@@ -40,10 +41,9 @@ const Tvshows = () => {
                 <div className="placeholder">No Image Available</div>
               )}
               <h2>{show.name}</h2>
+              <button onClick={()=>{navigate(`/movie/${show.id}`)}}>click to play </button>
               <p><strong>Rating:</strong> {show.vote_average}</p>
-              <div className="overview">
-                <strong>Overview:</strong> {show.overview}
-              </div>
+              
             </div>
           ))
         ) : (
