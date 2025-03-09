@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
-import './moviestyle.css';
-import { Navigate, useNavigate } from "react-router-dom";
+
+import { useNavigate } from "react-router-dom";
+
 const Popularshows = () => {
   const [shows, setShows] = useState([]);
-  const navigate=useNavigate()
+  const navigate = useNavigate();
+
   const getShows = async () => {
     try {
       const response = await fetch(
@@ -31,23 +33,29 @@ const Popularshows = () => {
       <div className="movie-row">
         {shows.length > 0 ? (
           shows.map((show) => (
-            <div key={show.id} className="movie-card">
-              {show.poster_path ? (
-                <img
-                  src={`https://image.tmdb.org/t/p/w500${show.poster_path}`}
-                  alt={show.name}
-                />
-              ) : (
-                <div className="placeholder">No Image Available</div>
-              )}
-               <button onClick={()=>{navigate(`/movie/${show.id}`)}}>click to play </button>
-              <h2>{show.name}</h2>
+            <div key={show.id} className="movie-card-container">
+              <button
+                className="movie-card-button"
+                onClick={() => navigate(`/movie/${show.id}`)}
+              >
+                <div className="movie-card">
+                  {show.poster_path ? (
+                    <img
+                      src={`https://image.tmdb.org/t/p/w500${show.poster_path}`}
+                      alt={show.name}
+                    />
+                  ) : (
+                    <div className="placeholder">No Image Available</div>
+                  )}
+                  <h2>{show.name}</h2>
+                
+                </div>
+              </button>
               <p><strong>Rating:</strong> {show.vote_average}</p>
-             
             </div>
           ))
         ) : (
-          <p>Loading TV shows...</p>
+          <p>Loading Popular shows...</p>
         )}
       </div>
     </div>
