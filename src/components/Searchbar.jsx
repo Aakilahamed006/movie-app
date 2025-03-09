@@ -56,21 +56,24 @@ const Searchbar = () => {
         {searchResult.length > 0 ? (
           searchResult.slice(0, 4).map((movie) => (
             <div key={movie.id} className="movie-card-container">
-              <div
-                className="movie-card"
-                onClick={() => navigate(`/movie/${movie.id}`)} // Now clickable
+              <button
+                className="movie-card-button"
+                onClick={() => navigate(`/movie/${movie.id}`)}
               >
-                {movie.poster_path ? (
-                  <img
-                    src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-                    alt={movie.title}
-                  />
-                ) : (
-                  <div className="placeholder">No Image Available</div>
-                )}
-                <h2>{movie.title}</h2>
-                <p><strong>Rating:</strong> {movie.vote_average}</p>
-              </div>
+                <div className="movie-card">
+                  {movie.poster_path ? (
+                    <img
+                      src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                      alt={movie.title}
+                    />
+                  ) : (
+                    <div className="placeholder">No Image Available</div>
+                  )}
+                  <h2>{movie.title}</h2>
+                 
+                </div>
+              </button>
+              <p><strong>Rating:</strong> {movie.vote_average}</p>
             </div>
           ))
         ) : search.length > 0 ? (
