@@ -1,0 +1,125 @@
+/* General Page Styles */
+body {
+    background-color: #141414; /* Netflix Dark Background */
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Movie Title */
+.movie-title {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+    color: #e50914; /* Netflix Red */
+}
+
+/* Trailer Section */
+.trailer-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.trailer-heading {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.trailer-video {
+    transition: transform 0.3s ease-in-out;
+    border-radius: 8px;
+    max-width: 90%;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+}
+
+.trailer-video:hover {
+    transform: scale(1.01);
+}
+
+
+/* Movie Overview */
+.movie-overview {
+    max-width: 80%;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #b3b3b3;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* No Data Messages */
+.no-trailer,
+.no-actors {
+    text-align: center;
+    font-style: italic;
+    color: #b3b3b3;
+    font-size: 18px;
+}
+
+/* Actors Section */
+.actors-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.actor-item {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    width: 160px;
+}
+
+.actor-item:hover {
+    transform: scale(1.1);
+}
+
+.actor-image {
+    width: 120px;
+    height: 150px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+}
+
+.actor-name {
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.actor-character {
+    color: #b3b3b3;
+    font-style: italic;
+}
+.cast-heading {
+    font-size: 1.8rem;
+    margin-top: 20px;
+    color: #ffcc00;
+}
+/* Overview */
+.overview-heading {
+    font-size: 1.8rem;
+    margin-top: 20px;
+    color: #ffcc00;
+}
+.movie-overview:hover {
+    transform: scale(1.1);
+}
+/* Ratings & Release Date */
+.ratings,
+.release-date {
+    font-size: 1.2rem;
+    margin: 5px 0;
+}
